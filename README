@@ -1,0 +1,2 @@
+We use darknet(https://github.com/kriyeng/darknet) to train Yolov3 on Google Colab to detect license plates
+For creating labels, we use run 
