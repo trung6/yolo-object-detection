@@ -1,3 +1,3 @@
-We use darknet(https://github.com/kriyeng/darknet) to train Yolov3 on Google Colab for detect objects
+We use darknet(https://github.com/kriyeng/darknet) to train Yolov3 on Google Colab for detecting objects
 For creating labels, see https://github.com/tzutalin/labelImg
 But if you have just one class,use toolCreatingTrainingDatasetForYolo instead.

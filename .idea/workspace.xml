@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dc88bb7-d335-4239-95fc-076d0ac4bb23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/For Labelling/checkLabel.py" beforeDir="false" afterPath="$PROJECT_DIR$/For Labelling/checkLabel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_label.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crop_lp_from_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/crop_lp_from_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gen_vid_from_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/gen_vid_from_images.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolCreatingTrainingDatasetForYolo(2).py" beforeDir="false" afterPath="$PROJECT_DIR$/toolCreatingTrainingDatasetForYolo(2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use_model(official).py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+            <state>
+              <caret column="96" selection-start-column="96" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -83,8 +79,9 @@
         <option value="$PROJECT_DIR$/crop_lp_from_image.py" />
         <option value="$PROJECT_DIR$/gen_vid_from_images.py" />
         <option value="$PROJECT_DIR$/toolCreatingTrainingDatasetForYolo(2).py" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/check_label.py" />
+        <option value="$PROJECT_DIR$/For Labelling/checkLabel.py" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -123,6 +120,9 @@
       </pane>
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -150,7 +150,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24973656" />
@@ -245,10 +244,17 @@
     <entry file="file://$PROJECT_DIR$/For Labelling/README.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/For Labelling/checkLabel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
+        <state>
+          <caret column="96" selection-start-column="96" selection-end-column="96" />
         </state>
       </provider>
     </entry>

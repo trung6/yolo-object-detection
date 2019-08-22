@@ -2,7 +2,7 @@ import os
 
 d = dict.fromkeys(range(0, 36), 0)
 # print(d)
-inputFolder = r'F:\LpCrop'
+inputFolder = r'Crop'
 for fileName in os.listdir(inputFolder):
     if '.txt' not in fileName:
         continue
