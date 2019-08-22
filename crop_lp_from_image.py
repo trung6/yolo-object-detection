@@ -2,13 +2,13 @@ import cv2, os
 from PIL import Image
 import random
 
-inputFolder = r'C:\Users\Hi\Documents\drive\darknet\imgTest'
-outputFolder = r'F:\LpCrop'
+inputFolder = r''
+outputFolder = r'Crop'
 count = 0
 listFile = os.listdir(inputFolder)
 for fileName1 in os.listdir(inputFolder):
     fileName = random.choice(listFile)
-    if (('jpg' in fileName) and ('Lpn' in fileName)):
+    if ('jpg' in fileName):
         count+=1
         imgPath = os.path.join(inputFolder, fileName)
         fileTxt = fileName.replace('jpg', 'txt')

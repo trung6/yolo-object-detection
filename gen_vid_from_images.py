@@ -2,7 +2,7 @@ import cv2
 import os, sys
 import time
 import matplotlib.pyplot as plt
-inputFolder = r'C:\Users\Hi\Desktop\Lpn\20190723'
+inputFolder = r''
 outPath = os.path.join(inputFolder,'outpy1.avi')
 w = 1280
 h = 960

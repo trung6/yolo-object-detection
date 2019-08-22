@@ -2,24 +2,16 @@ import os, sys
 import cv2
 import time
 import numpy as np
-import pytesseract
 from PIL import Image
 import cv2
-import argparse
 import numpy as np
 from Preprocess import *
 
-# inputFolder = r"C:\Users\Hi\Documents\drive\labelImg-master\downloads\bien so xe o to"
-inputFolder = r'C:\Users\Hi\Desktop\Lpn\20190723'
-# outputFolder = r"F:\LpAfterDetection"
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Hi\Documents\drive\tesseract\build\bin\Debug\tesseract.exe'
-# setting_confidence = 1
-
 #################################################################################
 #params
-configPath= r'yolo_obj.cfg'
-weightsPath = r'C:\Users\Hi\Desktop\weights from YOLO\yolo_obj_2000.weights'
-classesPath = r'yolov3.txt'
+configPath= r'yolo_obj.cfg' # path to config file
+weightsPath = r'yolo_obj_2000.weights' # path to weight file
+classesPath = r'yolov3.txt' # path to file containning labels
 
 scale = 0.00392
 classes = None
@@ -28,14 +20,20 @@ classes = [line.strip() for line in f.readlines()]
 f.close()
 COLORS = np.random.uniform(0, 255, size=(len(classes), 3))
 net = cv2.dnn.readNet(weightsPath, configPath)
-####Read Video
-videoPath = r'C:\Users\Hi\Desktop\Lpn\20190723\outpy.avi'
-cap = cv2.VideoCapture(videoPath)
-#######Read Image
-# imgPath = r'C:\Users\Hi\Documents\drive\darknet\img\6612199_LpnImg_220190717000455.jpg'
+
+####Read a video
+# videoPath = r'test.avi' # Path to a video
+# cap = cv2.VideoCapture(videoPath)
+
+#######Read one image
+# imgPath = r'image.png' # path to a image
 # image = cv2.imread(imgPath)
 
+#####Read images:
+inputFolder = r'images' # path to images folder
+
 ###################################################################################
+#####functions
 def get_output_layers(net):
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
@@ -49,8 +47,11 @@ def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
     cv2.putText(img, str(int(confidence * 100)) + '%',(x +100, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
     return
 
+####################################################################################
+#####Main
 # while(cap.isOpened()):
 #     ret, image = cap.read()
+
 for fileName in os.listdir(inputFolder):
     if ('jpg' in fileName) or ('png' in fileName):
         imgPath = os.path.join(inputFolder, fileName)
@@ -58,10 +59,10 @@ for fileName in os.listdir(inputFolder):
         continue
     image = cv2.imread(imgPath)
 
-   #Xam hoa anh va tao anh xam 3 chanels
-    image, imgThresh = preprocess(image)
-    # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    image = np.stack((image,)*3, axis=-1)
+   # #create gray image but 3 chanels
+   #  image, imgThresh = preprocess(image)
+   #  # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+   #  image = np.stack((image,)*3, axis=-1)
 
     Width = image.shape[1]
     Height = image.shape[0]

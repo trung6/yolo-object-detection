@@ -18,7 +18,7 @@ count = 0
 trainTxtPath = os.path.abspath(r"C:\Users\Hi\Documents\drive\darknet\train.txt")#txt file contains paths link to training data
 testTxtPath = os.path.abspath(r"C:\Users\Hi\Documents\drive\darknet\test.txt")#txt file contains paths link to testing data or validating data.
 
-inputFolder = os.path.abspath(r"C:\Users\Hi\Desktop\Lpn\20190723")#directory contains raw images(data).
+inputFolder = os.path.abspath(r"images")#directory contains raw images(data).
 
 #if genTrain == True, we are generating Training Dataset.
 #if genTrain == False, we are generating Testing Dataset.
@@ -69,10 +69,6 @@ def click_and_crop(event, x, y, flags, param):
         bounding_h = int(height)
         bounding_x2 = bounding_x1 + bounding_w
         bounding_y2 = bounding_y1 + bounding_h
-        # cv2.line(img, (bounding_x1, bounding_y1), (bounding_x1, bounding_y2), (0, 0xFF, 0), 2)
-        # cv2.line(img, (bounding_x1, bounding_y1), (bounding_x2, bounding_y1), (0, 0xFF, 0), 2)
-        # cv2.line(img, (bounding_x2, bounding_y1), (bounding_x2, bounding_y2), (0, 0xFF, 0), 2)
-        # cv2.line(img, (bounding_x1, bounding_y2), (bounding_x2, bounding_y2), (0, 0xFF, 0), 2)
         cv2.rectangle(img, (bounding_x1, bounding_y1), (bounding_x2, bounding_y2), (0, 0xFF, 0), 2)
         if(count % 1000 == 0):
             warning = "image + {0}".format(count)
@@ -100,14 +96,6 @@ def click_and_crop(event, x, y, flags, param):
         file = open(outputPath, 'w')
         file.writelines(line)
         file.close()
-    # else:
-        # countNegative = countNegative + 1
-        # if debugCheck == True:
-        #    print("countNagative = ", countNegative)
-        # line = ""
-        # file = open(outputPath, 'w')
-        # file.writelines(line)
-        # file.close()
     return
 ##############################################################################################################
 
@@ -192,7 +180,3 @@ for fileName in os.listdir(inputFolder):
 
     # close all open windows
     cv2.destroyAllWindows()
-
-    print(ord('A'))
-    print(ord('a'))
-    print(ord(' '))
